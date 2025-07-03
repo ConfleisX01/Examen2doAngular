@@ -1,0 +1,13 @@
+<div class="w-screen-full flex justify-center">
+    <div class="w-1/2 p-2 grid grid-cols-3 gap-4">
+        <app-producto
+            *ngFor="let producto of productos"
+            [mostrarBoton]="true"
+            [nombre]="producto.nombre"
+            [descripcion]="producto.descripcion"
+            [precio]="producto.precio"
+            [imagen]="producto.imagen"
+            [categoria]="producto.categoria">
+        </app-producto>
+    </div>
+</div>

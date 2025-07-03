@@ -1,0 +1,18 @@
+<div class="max-w-full flex items-center flex-col">
+    <a href="#" class="w-3/4">
+        <div class="flex items-center flex-col block ">
+            <img class="h-auto max-w-full rounded-lg" src="https://picsum.photos/id/2/1800/400" alt="image description">
+        </div>
+        <h5 class="my-4 text-3xl font-bold text-center tracking-tight text-gray-900">La mejor variedad de productos</h5>
+    </a>
+    <div class="w-3/4 rounded-lg grid grid-cols-5 gap-4 auto-rows-fr h-150">
+        <app-producto
+        *ngFor="let producto of listaProductos | slice:0:5"
+        [mostrarBoton]="false"
+        [nombre]="producto.nombre"
+        [descripcion]="producto.descripcion"
+        [precio]="producto.precio"
+        [imagen]="producto.imagen"
+        [categoria]="producto.categoria"></app-producto>
+    </div>
+</div>
